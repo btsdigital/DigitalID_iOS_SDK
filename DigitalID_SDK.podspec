@@ -11,6 +11,7 @@ DigitalID SDK
   s.source              = { :git => 'https://github.com/btsdigital/DigitalID_iOS_SDK.git', :tag => "v#{s.version}" }
   s.source_files        = 'DigitalID_SDK/*.{h,m}'
   s.dependency          'DigitalIDZoomAuthenticationCordovaPlugin'
+  s.dependency          'Cordova'
 
   s.ios.deployment_target = '11.0'
 end
