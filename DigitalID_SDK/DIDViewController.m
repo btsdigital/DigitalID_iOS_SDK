@@ -42,9 +42,7 @@
 
 - (void)tiktak {
     NSString *urlString = self.wkWebView.URL.absoluteString;
-//    NSLog(@"urlString: %@", urlString);
-    if ([urlString containsString:self.redirectURL]) {
-//        NSLog(@"🔥 %@", self.redirectURL);
+    if ([urlString containsString:self.redirectURL] && ![urlString containsString:@"redirect_uri"]) {
         [timer invalidate];
         [self.didDelegate didViewController:self didTriggerRedirectUrl:urlString];
     }
