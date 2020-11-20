@@ -11,6 +11,8 @@
 		AA5AB6B425303CFC0041E3C8 /* DigitalID_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5AB6B225303CFC0041E3C8 /* DigitalID_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA5AB749253048120041E3C8 /* DIDViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = AA5AB747253048120041E3C8 /* DIDViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA5AB74A253048120041E3C8 /* DIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5AB748253048120041E3C8 /* DIDViewController.m */; };
+		AAAC82ED25664B1500316823 /* DigitalIDOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAC82EB25664B1500316823 /* DigitalIDOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AAAC82EE25664B1500316823 /* DigitalIDOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = AAAC82EC25664B1500316823 /* DigitalIDOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		AA5AB6B325303CFC0041E3C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5AB747253048120041E3C8 /* DIDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDViewController.h; sourceTree = "<group>"; };
 		AA5AB748253048120041E3C8 /* DIDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDViewController.m; sourceTree = "<group>"; };
+		AAAC82EB25664B1500316823 /* DigitalIDOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DigitalIDOptions.h; sourceTree = "<group>"; };
+		AAAC82EC25664B1500316823 /* DigitalIDOptions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalIDOptions.m; sourceTree = "<group>"; };
 		D41E953A60CD7D80654D38C1 /* Pods_DigitalID_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalID_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +74,8 @@
 				AA5AB748253048120041E3C8 /* DIDViewController.m */,
 				AA5AB6B225303CFC0041E3C8 /* DigitalID_SDK.h */,
 				AA5AB6B325303CFC0041E3C8 /* Info.plist */,
+				AAAC82EB25664B1500316823 /* DigitalIDOptions.h */,
+				AAAC82EC25664B1500316823 /* DigitalIDOptions.m */,
 			);
 			path = DigitalID_SDK;
 			sourceTree = "<group>";
@@ -90,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5AB6B425303CFC0041E3C8 /* DigitalID_SDK.h in Headers */,
+				AAAC82ED25664B1500316823 /* DigitalIDOptions.h in Headers */,
 				AA5AB749253048120041E3C8 /* DIDViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAAC82EE25664B1500316823 /* DigitalIDOptions.m in Sources */,
 				AA5AB74A253048120041E3C8 /* DIDViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

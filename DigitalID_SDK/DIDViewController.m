@@ -12,14 +12,25 @@
     NSTimer *timer;
 }
 
-- (id)initWithUrl:(NSString * _Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl {
+- (id)initWithUrl:(NSString *_Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl {
     self.startPage = url;
     self.redirectURL = redirectUrl;
     return [super initWithNibName:nil bundle:nil];
 }
 
+- (id)initWithUrl:(NSString *_Nonnull)url
+      redirectUrl:(NSString *_Nonnull)redirectUrl
+          options:(DigitalIDOptions *_Nullable)options {
+    self.startPage = url;
+    self.redirectURL = redirectUrl;
+    self.options = options;
+    return [super initWithNibName:nil bundle:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSUserDefaults standardUserDefaults] setValue:self.options.language forKey:@"did-language"];
     
     self.wkWebView = (WKWebView *)self.webView;
     

@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <Cordova/CDVViewController.h>
 #import <WebKit/WebKit.h>
+#import "DigitalIDOptions.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,8 +24,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic, copy) NSString *redirectURL;
 @property(weak, nonatomic) WKWebView *wkWebView;
+@property(nonatomic, strong, nullable) DigitalIDOptions *options;
 
-- (id)initWithUrl:(NSString * _Nonnull)url redirectUrl:(NSString *_Nonnull)redirectUrl;
+- (id)initWithUrl:(NSString *)url redirectUrl:(NSString *)redirectUrl __deprecated_msg("use initWithUrl:redirectUrl:options instead.");
+
+- (id)initWithUrl:(NSString *)url
+      redirectUrl:(NSString *)redirectUrl
+          options:(DigitalIDOptions *_Nullable)options;
 
 @end
 
