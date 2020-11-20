@@ -14,7 +14,7 @@ Podfile:
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 
-pod ‘DigitalID_SDK’, ‘1.0.6’
+pod ‘DigitalID_SDK’, ‘1.1.0’
 ```
 
 **Зависимости:**
@@ -42,7 +42,10 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        didController = DIDViewController(url: "https://app.gov.stage.digital-id.kz/oauth?response_type=code&client_id={client_id}&scope=ID_CARD&redirect_uri=https://www.egov.kz/digital-id-callback&state=EGOV", redirectUrl: "site.com/digital-id-callback")
+        let options = DigitalIDOptions()
+        options.language = "ru"
+
+        didController = DIDViewController(url: "https://app.gov.stage.digital-id.kz/oauth?response_type=code&client_id={client_id}&scope=ID_CARD&redirect_uri=https://www.egov.kz/digital-id-callback&state=EGOV", redirectUrl: "site.com/digital-id-callback", options: options)
         didController?.didDelegate = self
         self.present(didController!, animated: true, completion: nil)
     }
@@ -59,6 +62,7 @@ extension ViewController: DIDViewControllerDelegate {
 
 `url` - адрес запуска DigitalID
 `redirectUrl` - адрес клиента, который должен полностью или частично быть частью `redirect_uri` в параметре `url`
+`options` - настройки сдк. Например можете настроить язык на котором будет запущен Digital ID.
 
 Где, 
 `func didViewController(_ viewController: DIDViewController, didTriggerRedirectUrl redirectUrl: String)`
@@ -67,4 +71,4 @@ extension ViewController: DIDViewControllerDelegate {
 
 🍂
 
-**DigitalID SDK** - во фреймворке `DigitalIDZoomAuthenticationCordovaPlugin` используем Zoom (iOS SDK) от компании [FaceTec](https://www.facetec.com/)
+**DigitalID SDK** - во фреймворке `DigitalIDZoomAuthenticationCordovaPlugin` используем FaceTec (iOS SDK) от компании [FaceTec](https://www.facetec.com/)
