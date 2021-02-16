@@ -9,7 +9,7 @@ DEPENDENCIES:
   - DigitalIDZoomAuthenticationCordovaPlugin (= 0.2.7)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Cordova
     - DigitalIDZoomAuthenticationCordovaPlugin
 
@@ -19,4 +19,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9cb5e2d5205d99774fb8682d94b1fccda9605b4f
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
