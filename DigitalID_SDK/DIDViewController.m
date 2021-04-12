@@ -33,16 +33,16 @@
     [[NSUserDefaults standardUserDefaults] setValue:self.options.language forKey:@"did-language"];
     
     self.wkWebView = (WKWebView *)self.webView;
-    
+    [self evaluateSetIsSDK];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     timer = [NSTimer scheduledTimerWithTimeInterval:1
                                              target:self
                                            selector:@selector(tiktak)
                                            userInfo:nil
                                             repeats:YES];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
     [timer fire];
 }
 
@@ -53,10 +53,34 @@
 
 - (void)tiktak {
     NSString *urlString = self.wkWebView.URL.absoluteString;
+    [self setUserNameForZoom:urlString];
     if ([urlString containsString:self.redirectURL] && ![urlString containsString:@"redirect_uri"]) {
         [timer invalidate];
         [self.didDelegate didViewController:self didTriggerRedirectUrl:urlString];
     }
+}
+
+- (void)setUserNameForZoom:(NSString *)urlString {
+    if ([urlString containsString:@"userName"]) {
+        NSMutableDictionary *queryStringDictionary = [[NSMutableDictionary alloc] init];
+        NSString *queryParamsString = [urlString componentsSeparatedByString:@"?"].lastObject;
+        NSArray *urlComponents = [queryParamsString componentsSeparatedByString:@"&"];
+        for (NSString *keyValuePair in urlComponents) {
+            NSArray *pairComponents = [keyValuePair componentsSeparatedByString:@"="];
+            NSString *key = [[pairComponents firstObject] stringByRemovingPercentEncoding];
+            NSString *value = [[pairComponents lastObject] stringByRemovingPercentEncoding];
+            
+            [queryStringDictionary setObject:value forKey:key];
+        }
+            
+        NSString *userName = [queryStringDictionary objectForKey:@"userName"];
+        [[NSUserDefaults standardUserDefaults] setValue:userName forKey:@"did-userName"];
+    }
+}
+
+- (void)evaluateSetIsSDK {
+    NSString *script = @"window.isDidSDK = true;";
+    [self.wkWebView evaluateJavaScript:script completionHandler:nil];
 }
 
 - (void)dealloc {
