@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                = 'DigitalID_SDK'
-  s.version             = '1.1.1'
+  s.version             = '1.1.2'
   s.summary             = 'DigitalID SDK for partners'
   s.description         = <<-DESC
 DigitalID SDK
