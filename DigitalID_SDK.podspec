@@ -10,7 +10,7 @@ DigitalID SDK
   s.author              = { 'DigitalID' => 'almas.adilbek@btsdigital.kz' }
   s.source              = { :git => 'https://github.com/btsdigital/DigitalID_iOS_SDK.git', :tag => "v#{s.version}" }
   s.source_files        = 'DigitalID_SDK/*.{h,m}'
-  s.dependency          'DigitalIDZoomAuthenticationCordovaPlugin', '~> 0.2.0'
+  s.dependency          'DigitalIDZoomAuthenticationCordovaPlugin', '~> 0.3.0'
   s.dependency          'Cordova'
   s.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.pod_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
