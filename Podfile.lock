@@ -2,11 +2,11 @@ PODS:
   - Cordova (6.1.1):
     - Cordova/Cordova (= 6.1.1)
   - Cordova/Cordova (6.1.1)
-  - DigitalIDZoomAuthenticationCordovaPlugin (0.4.1):
+  - DigitalIDZoomAuthenticationCordovaPlugin (0.6.0):
     - Cordova
 
 DEPENDENCIES:
-  - DigitalIDZoomAuthenticationCordovaPlugin (= 0.4.1)
+  - DigitalIDZoomAuthenticationCordovaPlugin
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -15,8 +15,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Cordova: eea60c20c8262ae4aecc15e78fe6e03543c2cde4
-  DigitalIDZoomAuthenticationCordovaPlugin: 23e2132d8e4fbad4b9bc192312aafec6a8f62b33
+  DigitalIDZoomAuthenticationCordovaPlugin: 48034ca6f950f8a1901fe5f25020ff65fcbbf168
 
-PODFILE CHECKSUM: f5bf19be2a09f9473467377806dcd6d72a05e8a5
+PODFILE CHECKSUM: fbfb48b1f8069c4ee1c8bb7cc2ffd005bd2265e7
 
 COCOAPODS: 1.10.1
