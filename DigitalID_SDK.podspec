@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version             = '1.3.0'
   s.summary             = 'DigitalID SDK for partners'
   s.description         = <<-DESC
-DigitalID SDK
+Digital ID SDK for partners
                        DESC
   s.homepage            = 'https://digital-id.kz'
   s.license             = 'MIT'
