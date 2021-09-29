@@ -14,7 +14,7 @@ Podfile:
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 
-pod ‘DigitalID_SDK’, ‘1.1.0’
+pod ‘DigitalID_SDK’, ‘1.3.0’
 ```
 
 **Зависимости:**
